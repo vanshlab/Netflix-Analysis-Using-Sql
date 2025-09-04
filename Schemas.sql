@@ -1,6 +1,4 @@
 -- SCHEMAS of Netflix
-
-DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
 (
 	show_id	VARCHAR(5),
