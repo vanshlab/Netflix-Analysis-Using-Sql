@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS Netflix;
 CREATE TABLE Netflix(
 	show_id VARCHAR(6),
 	type VARCHAR(10),
@@ -197,6 +196,7 @@ FROM Netflix
 SELECT category, COUNT(*) as total_content
 FROM new_table
 GROUP BY 1
+
 
 
 
