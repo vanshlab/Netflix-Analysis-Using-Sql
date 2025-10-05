@@ -9,8 +9,7 @@
 7. Find all the movies/TV shows by director 'Rajiv Chilaka'!
 8. List all TV shows with more than 5 seasons
 9. Count the number of content items in each genre
-10.Find each year and the average numbers of content release in India on netflix. 
-return top 5 year with highest avg content release!
+10.Find No of movies Anupam Kher works
 11. List all movies that are documentaries
 12. Find all content without a director
 13. Find how many movies actor 'Salman Khan' appeared in last 10 years!
