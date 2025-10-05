@@ -170,26 +170,11 @@ GROUP BY 1;
 
 **Objective:** Count the number of content items in each genre.
 
-### 10.Find each year and the average numbers of content release in India on netflix. 
-return top 5 year with highest avg content release!
-
-```sql
-SELECT 
-    country,
-    release_year,
-    COUNT(show_id) AS total_release,
-    ROUND(
-        COUNT(show_id)::numeric /
-        (SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100, 2
-    ) AS avg_release
-FROM netflix
-WHERE country = 'India'
-GROUP BY country, release_year
-ORDER BY avg_release DESC
-LIMIT 5;
-```
-
-**Objective:** Calculate and rank years by the average number of content releases by India.
+### 10.Find No of movies Anupam Kher works
+SELECT *,count(*) FROM Netflix 
+WHERE
+	type='movie' and
+	casts ILIKE '%Salman Khan%'
 
 ### 11. List All Movies that are Documentaries
 
