@@ -112,25 +112,12 @@ GROUP BY 1;
 
 
 
-/*10.Find each year and the average numbers of content release in India on netflix. 
-return top 5 year with highest avg content release!*/
-SELECT 
-	country,
-	release_year,
-	COUNT(show_id) as total_release,
-	ROUND(
-		COUNT(show_id)::numeric/
-								(SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100 
-		,2
-		)
-		as avg_release
-FROM netflix
-WHERE country = 'India' 
-GROUP BY country, 2
-ORDER BY avg_release DESC 
-LIMIT 5
-
-
+/*10.Find No of movies Anupam Kher works*/
+SELECT *,count(*) FROM Netflix 
+WHERE
+	type='movie' and
+	casts ILIKE '%Salman Khan%'
+				
 
 
 
@@ -196,6 +183,7 @@ FROM Netflix
 SELECT category, COUNT(*) as total_content
 FROM new_table
 GROUP BY 1
+
 
 
 
